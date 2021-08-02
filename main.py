@@ -8,10 +8,10 @@ def parse_course_name(course):
     if re.match(r'^.+\d', course) is None or re.match(r'^[nN]ot', course) is not None:
         return []
     else:
-        course = course.replace('COMP SCI', 'COMPSCI').replace('I SY E', 'ISYE')
-        matches = re.match(r'(([A-Z]{3,})/?)+', course)
         result = []
-        return [course, matches]
+        for match in re.finditer(r'(?P<dept>([A-Z][&/\s]?){2,}(?=[\s\d]))', course):
+            result.append(match.group('dept').replace(' ', ''))
+        return [course, result]
 
 
 # connect to website
