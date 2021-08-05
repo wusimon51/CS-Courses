@@ -17,7 +17,7 @@ def parse_courses(course):
             try:
                 current_dept = association.group('dept').replace(' ', '')
             except IndexError:
-                result.append(current_dept + " " + association.group())
+                result.append(current_dept + ' ' + association.group())
         return result
 
 
@@ -32,9 +32,9 @@ course_divs = soup.find_all('div', class_='courseblock')
 course_map = {}
 for div in course_divs:
     prereq_list = []
-    course_name = div.find('span', class_='courseblockcode').text
-    prereq = div.find('span', class_='cbextra-data').text.replace(u'\xa0', u' ').replace('\u200b', '')
-    course_map[course_name] = parse_courses(prereq)
+    course_name = div.find('span', class_='courseblockcode').text.replace(u'\xa0', '').replace('\u200b', '')
+    prereq = div.find('span', class_='cbextra-data').text.replace(u'\xa0', ' ').replace('\u200b', '')
+    course_map[re.sub(r'(?<=[\sa-zA-Z])\d', lambda match: ' ' + match.group(), course_name)] = parse_courses(prereq)
 
 # associate courses and prereqs in dictionary (course -> prereq)
 for key in course_map:
