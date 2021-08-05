@@ -3,15 +3,22 @@ import re
 import requests
 
 
-def parse_course_name(course):
+def parse_courses(course):
     course = re.sub(r'\..+', '', course)
     if re.match(r'^.+\d', course) is None or re.match(r'^[nN]ot', course) is not None:
         return []
     else:
         result = []
-        for match in re.finditer(r'(?P<dept>([A-Z][&/\s]?){2,}(?=[\s\d]))', course):
-            result.append(match.group('dept').replace(' ', ''))
-        return [course, result]
+        departments = re.finditer(r'(?P<dept>([A-Z][&/\s]?){2,}(?=[\s\d]))', course)
+        nums = re.finditer(r'(?<!\d)\d{3}(?!\d)', course)
+        associations = sorted([dept for dept in departments] + [num for num in nums], key=lambda match: match.start())
+        current_dept = None
+        for association in associations:
+            try:
+                current_dept = association.group('dept').replace(' ', '')
+            except IndexError:
+                result.append(current_dept + " " + association.group())
+        return result
 
 
 # connect to website
@@ -27,7 +34,7 @@ for div in course_divs:
     prereq_list = []
     course_name = div.find('span', class_='courseblockcode').text
     prereq = div.find('span', class_='cbextra-data').text.replace(u'\xa0', u' ').replace('\u200b', '')
-    course_map[course_name] = parse_course_name(prereq)
+    course_map[course_name] = parse_courses(prereq)
 
 # associate courses and prereqs in dictionary (course -> prereq)
 for key in course_map:
