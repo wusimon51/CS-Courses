@@ -1,6 +1,9 @@
-from bs4 import BeautifulSoup
+import json
 import re
+
 import requests
+from bs4 import BeautifulSoup
+from flask import Flask, render_template, url_for
 
 
 def parse_courses(course):
@@ -29,6 +32,7 @@ page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 course_divs = soup.find_all('div', class_='courseblock')
 
+# associate courses and prereqs in dictionary (course -> prereq)
 course_map = {}
 for div in course_divs:
     prereq_list = []
@@ -36,8 +40,20 @@ for div in course_divs:
     prereq = div.find('span', class_='cbextra-data').text.replace(u'\xa0', ' ').replace('\u200b', '')
     course_map[re.sub(r'(?<=[\sa-zA-Z])\d', lambda match: ' ' + match.group(), course_name)] = parse_courses(prereq)
 
-# associate courses and prereqs in dictionary (course -> prereq)
-for key in course_map:
-    print(key, '->', course_map[key])
-
 # display courses
+app = Flask(__name__)
+
+
+@app.route('/')
+def display():
+    return render_template('index.html')
+
+
+@app.route('/data')
+def send_data():
+    global course_map
+    return json.dumps(course_map)
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
