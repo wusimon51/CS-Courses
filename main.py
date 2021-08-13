@@ -8,7 +8,7 @@ from flask import Flask, render_template, url_for
 
 def parse_courses(course_string, prereq_string):
     global nodes, links
-    nodes.add(course_string)
+    nodes[course_string] = None
     prereq_string = re.sub(r'\..+', '', prereq_string)
     if re.match(r'^.+\d', prereq_string) is None or re.match(r'^[nN]ot', prereq_string) is not None:
         return []
@@ -27,7 +27,7 @@ def parse_courses(course_string, prereq_string):
             except IndexError:
                 # if item is a course number
                 course = current_dept + ' ' + association.group()
-                nodes.add(course)
+                nodes[course] = None
                 links.append({'source': course, 'target': course_string})
 
 
@@ -42,7 +42,7 @@ course_divs = soup.find_all('div', class_='courseblock')
 # TODO create nodes and links arrays
 # associate courses and prereqs in dictionary (course -> prereq)
 
-nodes = set()
+nodes = {}
 links = []
 for div in course_divs:
     # string for course in question
@@ -65,7 +65,7 @@ def display():
 
 @app.route('/data')
 def send_data():
-    global course_map
+    global nodes, links
     return json.dumps({'nodes': [{'id': node} for node in nodes], 'links': links})
 
 

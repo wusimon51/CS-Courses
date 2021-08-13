@@ -1,8 +1,8 @@
 fetch('/data')
     .then(function (response) {
         response.json().then((courseMap) => {
+            console.log(courseMap);
             const nodes = courseMap.nodes;
-
             const links = courseMap.links;
             const width = d3.select('svg').attr('width');
             const height = d3.select('svg').attr('height');
