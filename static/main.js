@@ -20,10 +20,11 @@ fetch('/data')
                     svg
                         .selectAll('line')
                         .attr('transform', e.transform)
-
-                }));
+                }))
 
             const circles = svg
+                .append('g')
+                .attr('class', 'node')
                 .selectAll('circle')
                 .data(nodes)
                 .enter()
@@ -31,6 +32,8 @@ fetch('/data')
                 .attr('r', 8);
 
             const lines = svg
+                .append('g')
+                .attr('class', 'link')
                 .selectAll('line')
                 .data(links)
                 .enter()
