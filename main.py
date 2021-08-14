@@ -23,7 +23,7 @@ def parse_courses(course_string, prereq_string):
         for association in associations:
             try:
                 # if item is a department name
-                current_dept = association.group('dept').replace(' ', '')
+                current_dept = '/'.join(sorted(association.group('dept').replace(' ', '').split('/')))
             except IndexError:
                 # if item is a course number
                 course = current_dept + ' ' + association.group()
@@ -39,9 +39,7 @@ page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 course_divs = soup.find_all('div', class_='courseblock')
 
-# TODO create nodes and links arrays
 # associate courses and prereqs in dictionary (course -> prereq)
-
 nodes = {}
 links = []
 for div in course_divs:
@@ -52,6 +50,7 @@ for div in course_divs:
 
     # normalize course's name
     course_name = re.sub(r'(?<=[\sa-zA-Z])\d', lambda match: ' ' + match.group(), course_name)
+    course_name = '/'.join(sorted(course_name.split(' ')[0].split('/'))) + ' ' + course_name.split(' ')[1]
     parse_courses(course_name, prereqs)
 
 # display courses
