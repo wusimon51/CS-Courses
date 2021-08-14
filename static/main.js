@@ -7,11 +7,11 @@ fetch('/data')
             const width = d3.select('svg').attr('width');
             const height = d3.select('svg').attr('height');
             const simulation = d3.forceSimulation(nodes)
-                .force('charge', d3.forceManyBody().strength(-200))
-                .force('link', d3.forceLink(links).id(d => d.id))
+                .force('charge', d3.forceManyBody().strength(-250))
+                .force('link', d3.forceLink(links).id(d => d.id).distance(100))
                 .force('center', d3.forceCenter(width / 2, height / 2))
-                // .force('x', d3.forceX(width / 2))
-                // .force('y', d3.forceY(height / 2))
+                .force('x', d3.forceX())
+                .force('y', d3.forceY())
 
             const svg = d3.select('svg')
                 .call(d3.zoom().on('zoom', (e) => {
@@ -44,16 +44,16 @@ fetch('/data')
                 .append('circle')
                 .attr('r', 8)
 
-            const text = svg
-                .append('g')
-                .attr('class', 'text')
-                .selectAll('text')
-                .data(nodes)
-                .enter()
-                .append('text')
-                .style('pointer-events', 'none')
-                .style('fill', 'blue')
-                .text((node) => node.id);
+            // const text = svg
+            //     .append('g')
+            //     .attr('class', 'text')
+            //     .selectAll('text')
+            //     .data(nodes)
+            //     .enter()
+            //     .append('text')
+            //     .style('pointer-events', 'none')
+            //     .style('fill', 'blue')
+            //     .text((node) => node.id);
 
             simulation.on('tick', () => {
                 circles
@@ -64,9 +64,9 @@ fetch('/data')
                     .attr('y1', (link) => link.source.y)
                     .attr('x2', (link) => link.target.x)
                     .attr('y2', (link) => link.target.y)
-                text
-                    .attr('x', (node) => node.x + 10)
-                    .attr('y', (node) => node.y - 10)
+                // text
+                //     .attr('x', (node) => node.x + 10)
+                //     .attr('y', (node) => node.y - 10)
             })
         })
     });
