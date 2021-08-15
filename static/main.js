@@ -1,7 +1,6 @@
 fetch('/data')
     .then(function (response) {
         response.json().then((courseMap) => {
-            // TODO untangle nodes
             const nodes = courseMap.nodes.map(node => Object.create(node));
             const links = courseMap.links.map(link => Object.create(link));
             const width = d3.select('svg').attr('width');
@@ -20,11 +19,28 @@ fetch('/data')
                         .attr('transform', e.transform);
                     svg
                         .selectAll('line')
-                        .attr('transform', e.transform)
+                        .attr('transform', e.transform);
                     svg
                         .selectAll('text')
-                        .attr('transform', e.transform)
+                        .attr('transform', e.transform);
                 }))
+
+            const defs = svg
+                .append('defs')
+                .selectAll('marker')
+                .data(['node'])
+                .enter()
+                .append('marker')
+                .attr('id', 'arrow')
+                .attr('viewBox', '0 -2.5 5 5')
+                .attr('refX', 8)
+                .attr('refY', 0)
+                .attr('markerWidth', 15)
+                .attr('markerHeight', 15)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M0,-1.5L5,0L0,1.5')
+                .attr('fill', '#A9A9A9')
 
             const lines = svg
                 .append('g')
@@ -34,7 +50,9 @@ fetch('/data')
                 .enter()
                 .append('line')
                 .attr('stroke', '#A9A9A9')
+                .attr('marker-end', 'url(#arrow)')
 
+            // TODO style circles
             const circles = svg
                 .append('g')
                 .attr('class', 'node')
@@ -43,18 +61,22 @@ fetch('/data')
                 .enter()
                 .append('circle')
                 .attr('r', 8)
+                .on('mouseover', function (event, d) {
+                    const node = d3.select(this);
+                    svg
+                        .append('text')
+                        .attr('id', d.id.replace(/[\s\/]/g, ''))
+                        .attr('x', node.attr('cx') + 15)
+                        .attr('y', node.attr('cy') + 15)
+                        .attr('transform', node.attr('transform'))
+                        .attr('fill', 'blue')
+                        .text(d.id);
+                })
+                .on('mouseout', function (event, d) {
+                    d3.select('#' + d.id.replace(/[\s\/]/g, '')).remove();
+                })
 
-            // const text = svg
-            //     .append('g')
-            //     .attr('class', 'text')
-            //     .selectAll('text')
-            //     .data(nodes)
-            //     .enter()
-            //     .append('text')
-            //     .style('pointer-events', 'none')
-            //     .style('fill', 'blue')
-            //     .text((node) => node.id);
-
+            // TODO add hover for text
             simulation.on('tick', () => {
                 circles
                     .attr('cx', (node) => node.x)
@@ -64,9 +86,7 @@ fetch('/data')
                     .attr('y1', (link) => link.source.y)
                     .attr('x2', (link) => link.target.x)
                     .attr('y2', (link) => link.target.y)
-                // text
-                //     .attr('x', (node) => node.x + 10)
-                //     .attr('y', (node) => node.y - 10)
-            })
+            });
+            return svg.node();
         })
     });
