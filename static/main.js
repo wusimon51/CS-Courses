@@ -42,6 +42,7 @@ fetch('/data')
                 .attr('d', 'M0,-1.5L5,0L0,1.5')
                 .attr('fill', '#A9A9A9')
 
+            // TODO add links to hover
             const lines = svg
                 .append('g')
                 .attr('class', 'link')
@@ -64,10 +65,13 @@ fetch('/data')
                 .on('mouseover', function (event, d) {
                     const node = d3.select(this);
                     svg
-                        .append('text')
+                        .append('g')
                         .attr('id', d.id.replace(/[\s\/]/g, ''))
-                        .attr('x', node.attr('cx') + 15)
-                        .attr('y', node.attr('cy') + 15)
+                        // .selectAll('text')
+                        // .enter()
+                        .append('text')
+                        .attr('x', node.attr('cx') + 500)
+                        .attr('y', node.attr('cy') + 500)
                         .attr('transform', node.attr('transform'))
                         .attr('fill', 'blue')
                         .text(d.id);
@@ -76,7 +80,7 @@ fetch('/data')
                     d3.select('#' + d.id.replace(/[\s\/]/g, '')).remove();
                 })
 
-            // TODO add hover for text
+            // TODO fix text positioning
             simulation.on('tick', () => {
                 circles
                     .attr('cx', (node) => node.x)
