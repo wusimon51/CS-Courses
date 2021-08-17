@@ -1,3 +1,7 @@
+function normalizeSelector(selector) {
+    return selector.replace(/[\s\/&]/g, '');
+}
+
 fetch('/data')
     .then(function (response) {
         response.json().then((courseMap) => {
@@ -33,7 +37,7 @@ fetch('/data')
                 .append('marker')
                 .attr('id', 'arrow')
                 .attr('viewBox', '0 -2.5 5 5')
-                .attr('refX', 8)
+                .attr('refX', 7)
                 .attr('refY', 0)
                 .attr('markerWidth', 15)
                 .attr('markerHeight', 15)
@@ -42,7 +46,7 @@ fetch('/data')
                 .attr('d', 'M0,-1.5L5,0L0,1.5')
                 .attr('fill', '#A9A9A9');
 
-            // TODO add links to hover
+            // TODO add source node tooltips to hover
             const lines = svg
                 .append('g')
                 .attr('class', 'link')
@@ -50,6 +54,7 @@ fetch('/data')
                 .data(links)
                 .enter()
                 .append('line')
+                .attr('class', (d) => `source-${normalizeSelector(d.source.id)} target-${normalizeSelector(d.target.id)}`)
                 .attr('stroke', '#A9A9A9')
                 .attr('marker-end', 'url(#arrow)');
 
@@ -61,22 +66,29 @@ fetch('/data')
                 .data(nodes)
                 .enter()
                 .append('circle')
+                .attr('class', (d) => normalizeSelector(d.id))
                 .attr('r', 8)
                 .on('mouseover', function (event, d) {
                     const node = d3.select(this);
                     svg
-                        .append('g')
-                        .attr('id', d.id.replace(/[\s\/&]/g, ''))
                         .append('text')
+                        .attr('id', 'label-' + normalizeSelector(d.id))
                         .attr('dx', parseFloat(node.attr('cx')) + 8)
                         .attr('dy', parseFloat(node.attr('cy')) - 8)
                         .attr('transform', node.attr('transform'))
                         .attr('fill', 'blue')
                         .style('pointer-events', 'none')
                         .text(d.id);
+                    svg
+                        .selectAll('.target-' + normalizeSelector(d.id))
+                        .attr('stroke', 'red');
+
                 })
                 .on('mouseout', function (event, d) {
-                    d3.select('#' + d.id.replace(/[\s\/&]/g, '')).remove();
+                    d3.select('#' + 'label-' + normalizeSelector(d.id)).remove();
+                    svg.selectAll('.target-' + normalizeSelector(d.id))
+                        // .selectAll('#')
+                        .attr('stroke', '#A9A9A9')
                 });
 
             simulation.on('tick', () => {
