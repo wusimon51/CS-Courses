@@ -67,14 +67,14 @@ fetch('/data')
                     svg
                         .append('g')
                         .attr('id', d.id.replace(/[\s\/]/g, ''))
-                        // .selectAll('text')
-                        // .enter()
                         .append('text')
-                        .attr('x', node.attr('cx') + 500)
-                        .attr('y', node.attr('cy') + 500)
+                        .attr('dx', parseFloat(node.attr('cx')) + 5)
+                        .attr('dy', parseFloat(node.attr('cy')) - 5)
                         .attr('transform', node.attr('transform'))
                         .attr('fill', 'blue')
+                        .style('pointer-events', 'none')
                         .text(d.id);
+                    console.log(parseFloat(node.attr('cx')) + 500);
                 })
                 .on('mouseout', function (event, d) {
                     d3.select('#' + d.id.replace(/[\s\/]/g, '')).remove();
