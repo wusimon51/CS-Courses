@@ -46,7 +46,7 @@ fetch('/data')
                 .attr('d', 'M0,-1.5L5,0L0,1.5')
                 .attr('fill', '#A9A9A9');
 
-            // TODO add source node tooltips to hover
+            // TODO add source node and outgoing node tooltips to hover
             const lines = svg
                 .append('g')
                 .attr('class', 'link')
@@ -54,7 +54,7 @@ fetch('/data')
                 .data(links)
                 .enter()
                 .append('line')
-                .attr('class', (d) => `source-${normalizeSelector(d.source.id)} target-${normalizeSelector(d.target.id)}`)
+                .attr('class', (d) => `link-source-${normalizeSelector(d.source.id)} link-target-${normalizeSelector(d.target.id)}`)
                 .attr('stroke', '#A9A9A9')
                 .attr('marker-end', 'url(#arrow)');
 
@@ -66,29 +66,42 @@ fetch('/data')
                 .data(nodes)
                 .enter()
                 .append('circle')
-                .attr('class', (d) => normalizeSelector(d.id))
+                .attr('id', (d) => normalizeSelector(d.id))
                 .attr('r', 8)
                 .on('mouseover', function (event, d) {
                     const node = d3.select(this);
                     svg
                         .append('text')
                         .attr('id', 'label-' + normalizeSelector(d.id))
-                        .attr('dx', parseFloat(node.attr('cx')) + 8)
-                        .attr('dy', parseFloat(node.attr('cy')) - 8)
+                        .attr('x', parseFloat(node.attr('cx')) + 8)
+                        .attr('y', parseFloat(node.attr('cy')) - 8)
                         .attr('transform', node.attr('transform'))
                         .attr('fill', 'blue')
                         .style('pointer-events', 'none')
                         .text(d.id);
-                    svg
-                        .selectAll('.target-' + normalizeSelector(d.id))
-                        .attr('stroke', 'red');
+                    let links = svg.selectAll('.link-target-' + normalizeSelector(d.id));
+                        links.attr('stroke', 'red')
+                        links.each(function () {
+                            let link = d3.select(this);
+                            const sourceClass = link.attr('class').split(' ').map((className) => className.replace(/.+-/, ''))[0];
+                            let sourceNode = svg.select('#' + sourceClass)
+                            svg
+                                .append('text')
+                                .attr('class', 'secondary-label')
+                                .attr('x', parseFloat(sourceNode.attr('cx')) + 8)
+                                .attr('y', parseFloat(sourceNode.attr('cy')) - 8)
+                                .attr('transform', sourceNode.attr('transform'))
+                                .attr('fill', 'blue')
+                                .style('pointer-events', 'none')
+                                .text(sourceNode.data()[0].id);
+                    })
 
                 })
                 .on('mouseout', function (event, d) {
                     d3.select('#' + 'label-' + normalizeSelector(d.id)).remove();
-                    svg.selectAll('.target-' + normalizeSelector(d.id))
-                        // .selectAll('#')
+                    svg.selectAll('.link-target-' + normalizeSelector(d.id))
                         .attr('stroke', '#A9A9A9')
+                    svg.selectAll('.secondary-label').remove();
                 });
 
             simulation.on('tick', () => {
