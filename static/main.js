@@ -1,12 +1,16 @@
+// removes forward slashes and ampersands for querySelector() to work
 function normalizeSelector(selector) {
     return selector.replace(/[\s\/&]/g, '');
 }
 
+// route in server to retrieve data from python
 fetch('/data')
     .then(function (response) {
         response.json().then((courseMap) => {
+            // create arrays for force simulation
             const nodes = courseMap.nodes.map(node => Object.create(node));
             const links = courseMap.links.map(link => Object.create(link));
+            // svg dimensions
             const width = d3.select('svg').attr('width');
             const height = d3.select('svg').attr('height');
             const simulation = d3.forceSimulation(nodes)
@@ -16,6 +20,7 @@ fetch('/data')
                 .force('x', d3.forceX())
                 .force('y', d3.forceY());
 
+            // transformations for zooming and panning
             const svg = d3.select('svg')
                 .call(d3.zoom().on('zoom', (e) => {
                     svg
@@ -29,6 +34,7 @@ fetch('/data')
                         .attr('transform', e.transform);
                 }));
 
+            // create arrowhead for end of lines
             const defs = svg
                 .append('defs')
                 .selectAll('marker')
@@ -46,6 +52,7 @@ fetch('/data')
                 .attr('d', 'M0,-1.5L5,0L0,1.5')
                 .attr('fill', '#A9A9A9');
 
+            // lines definition
             const lines = svg
                 .append('g')
                 .attr('class', 'link')
@@ -60,6 +67,7 @@ fetch('/data')
             // TODO style circles
             // TODO refactor labelling of adjacent nodes
             // TODO remove overlap of labels
+            // circles definition
             const circles = svg
                 .append('g')
                 .attr('class', 'node')
@@ -125,6 +133,7 @@ fetch('/data')
                         .attr('stroke', '#A9A9A9');
                 });
 
+            // run force simulation on nodes and links
             simulation.on('tick', () => {
                 circles
                     .attr('cx', (node) => node.x)
