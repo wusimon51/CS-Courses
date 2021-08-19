@@ -59,6 +59,7 @@ fetch('/data')
 
             // TODO style circles
             // TODO refactor labelling of adjacent nodes
+            // TODO remove overlap of labels
             const circles = svg
                 .append('g')
                 .attr('class', 'node')
@@ -97,9 +98,9 @@ fetch('/data')
                             .style('pointer-events', 'none')
                             .text(sourceNode.data()[0].id);
                     });
-                    // append text to target nodes
+                    // // append text to target nodes
                     let targetLinks = svg.selectAll('.link-source-' + normalizeSelector(d.id));
-                    targetLinks.attr('stroke', 'red')
+                    targetLinks.attr('stroke', 'green')
                     targetLinks.each(function () {
                         let targetLink = d3.select(this);
                         const targetClass = targetLink.attr('class').split(' ').map((className) => className.replace(/.+-/, ''))[1];
