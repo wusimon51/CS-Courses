@@ -3,6 +3,19 @@ function normalizeSelector(selector) {
     return selector.replace(/[\s\/&]/g, '');
 }
 
+function addLabels(className) {
+    const svg = d3.select('svg');
+    let node = svg.select('#' + className)
+    svg
+        .append('text')
+        .attr('class', 'secondary-label')
+        .attr('x', parseFloat(node.attr('cx')) + 8)
+        .attr('y', parseFloat(node.attr('cy')) - 8)
+        .attr('transform', node.attr('transform'))
+        .attr('fill', 'blue')
+        .style('pointer-events', 'none')
+        .text(node.data()[0].id);
+}
 // route in server to retrieve data from python
 fetch('/data')
     .then(function (response) {
@@ -65,7 +78,6 @@ fetch('/data')
                 .attr('marker-end', 'url(#arrow)');
 
             // TODO style circles
-            // TODO refactor labelling of adjacent nodes
             // TODO remove overlap of labels
             // circles definition
             const circles = svg
@@ -95,34 +107,16 @@ fetch('/data')
                     sourceLinks.each(function () {
                         let sourceLink = d3.select(this);
                         const sourceClass = sourceLink.attr('class').split(' ').map((className) => className.replace(/.+-/, ''))[0];
-                        let sourceNode = svg.select('#' + sourceClass)
-                        svg
-                            .append('text')
-                            .attr('class', 'secondary-label')
-                            .attr('x', parseFloat(sourceNode.attr('cx')) + 8)
-                            .attr('y', parseFloat(sourceNode.attr('cy')) - 8)
-                            .attr('transform', sourceNode.attr('transform'))
-                            .attr('fill', 'blue')
-                            .style('pointer-events', 'none')
-                            .text(sourceNode.data()[0].id);
+                        addLabels(sourceClass);
                     });
-                    // // append text to target nodes
+                    // append text to target nodes
                     let targetLinks = svg.selectAll('.link-source-' + normalizeSelector(d.id));
                     targetLinks.attr('stroke', 'green')
                     targetLinks.each(function () {
                         let targetLink = d3.select(this);
                         const targetClass = targetLink.attr('class').split(' ').map((className) => className.replace(/.+-/, ''))[1];
-                        let targetNode = svg.select('#' + targetClass)
-                        svg
-                            .append('text')
-                            .attr('class', 'secondary-label')
-                            .attr('x', parseFloat(targetNode.attr('cx')) + 8)
-                            .attr('y', parseFloat(targetNode.attr('cy')) - 8)
-                            .attr('transform', targetNode.attr('transform'))
-                            .attr('fill', 'blue')
-                            .style('pointer-events', 'none')
-                            .text(targetNode.data()[0].id)
-                    })
+                        addLabels(targetClass);
+                    });
                 })
                 .on('mouseout', function (event, d) {
                     d3.select('#' + 'label-' + normalizeSelector(d.id)).remove();
