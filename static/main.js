@@ -20,7 +20,6 @@ function addLabels(className) {
         .text(node.data()[0].id);
 }
 
-// route in server to retrieve data from python
 fetch('/data')
     .then(function (response) {
         response.json().then((courseMap) => {
@@ -107,7 +106,6 @@ fetch('/data')
                 .attr('stroke', '#C3BABA')
                 .attr('marker-end', 'url(#arrow)');
 
-            // TODO style circles
             // circles definition
             const circles = svg
                 .append('g')
@@ -175,6 +173,5 @@ fetch('/data')
                     .attr('x2', (link) => link.target.x)
                     .attr('y2', (link) => link.target.y);
             });
-            return svg.node();
         })
-    });
+    })

@@ -1,0 +1,1448 @@
+{
+  "nodes": [
+    {
+      "id": "COMPSCI 200"
+    },
+    {
+      "id": "COMPSCI 202"
+    },
+    {
+      "id": "MATH 096"
+    },
+    {
+      "id": "MATH 141"
+    },
+    {
+      "id": "COMPSCI 220"
+    },
+    {
+      "id": "COMPSCI/MATH 240"
+    },
+    {
+      "id": "MATH 217"
+    },
+    {
+      "id": "MATH 221"
+    },
+    {
+      "id": "MATH 275"
+    },
+    {
+      "id": "COMPSCI/ECE 252"
+    },
+    {
+      "id": "COMPSCI 270"
+    },
+    {
+      "id": "COMPSCI 298"
+    },
+    {
+      "id": "COMPSCI 300"
+    },
+    {
+      "id": "COMPSCI 302"
+    },
+    {
+      "id": "COMPSCI 310"
+    },
+    {
+      "id": "COMPSCI 301"
+    },
+    {
+      "id": "ECE 203"
+    },
+    {
+      "id": "COMPSCI 304"
+    },
+    {
+      "id": "MATH 222"
+    },
+    {
+      "id": "COMPSCI 319"
+    },
+    {
+      "id": "COMPSCI 320"
+    },
+    {
+      "id": "COMPSCI/ECE 352"
+    },
+    {
+      "id": "COMPSCI/ECE 354"
+    },
+    {
+      "id": "COMPSCI 368"
+    },
+    {
+      "id": "COMPSCI 369"
+    },
+    {
+      "id": "COMPSCI 367"
+    },
+    {
+      "id": "COMPSCI 400"
+    },
+    {
+      "id": "COMPSCI 402"
+    },
+    {
+      "id": "COMPSCI/STAT 403"
+    },
+    {
+      "id": "COMPSCI 407"
+    },
+    {
+      "id": "COMPSCI 412"
+    },
+    {
+      "id": "MATH 234"
+    },
+    {
+      "id": "COMPSCI/ISYE/MATH 425"
+    },
+    {
+      "id": "MATH 320"
+    },
+    {
+      "id": "MATH 340"
+    },
+    {
+      "id": "MATH 341"
+    },
+    {
+      "id": "MATH 375"
+    },
+    {
+      "id": "COMPSCI/ECE/MATH 435"
+    },
+    {
+      "id": "COMPSCI/STAT 471"
+    },
+    {
+      "id": "MATH/STAT 310"
+    },
+    {
+      "id": "STAT 333"
+    },
+    {
+      "id": "COMPSCI/MATH/STAT 475"
+    },
+    {
+      "id": "COMPSCI/CURRIC 502"
+    },
+    {
+      "id": "COMPSCI/ECE 506"
+    },
+    {
+      "id": "COMPSCI 536"
+    },
+    {
+      "id": "COMPSCI 537"
+    },
+    {
+      "id": "COMPSCI 545"
+    },
+    {
+      "id": "COMPSCI 559"
+    },
+    {
+      "id": "COMPSCI 564"
+    },
+    {
+      "id": "COMPSCI 570"
+    },
+    {
+      "id": "COMPSCI 679"
+    },
+    {
+      "id": "COMPSCI/ECE 552"
+    },
+    {
+      "id": "COMPSCI/MATH 513"
+    },
+    {
+      "id": "COMPSCI/MATH 514"
+    },
+    {
+      "id": "MATH 322"
+    },
+    {
+      "id": "MATH 376"
+    },
+    {
+      "id": "MATH 421"
+    },
+    {
+      "id": "MATH 521"
+    },
+    {
+      "id": "COMPSCI/DS/ISYE 518"
+    },
+    {
+      "id": "COMPSCI 520"
+    },
+    {
+      "id": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "id": "COMPSCI/ISYE/MATH/STAT 525"
+    },
+    {
+      "id": "MATH 443"
+    },
+    {
+      "id": "COMPSCI/ISYE 526"
+    },
+    {
+      "id": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "id": "MATH 276"
+    },
+    {
+      "id": "COMPSCI/ECE 533"
+    },
+    {
+      "id": "ECE 330"
+    },
+    {
+      "id": "COMPSCI 534"
+    },
+    {
+      "id": "COMPSCI 538"
+    },
+    {
+      "id": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "id": "COMPSCI 540"
+    },
+    {
+      "id": "MATH 211"
+    },
+    {
+      "id": "COMPSCI 542"
+    },
+    {
+      "id": "COMPSCI/ISYE/ME 558"
+    },
+    {
+      "id": "COMPSCI/ECE 561"
+    },
+    {
+      "id": "ECE 331"
+    },
+    {
+      "id": "MATH/STAT 309"
+    },
+    {
+      "id": "MATH/STAT 431"
+    },
+    {
+      "id": "STAT 311"
+    },
+    {
+      "id": "STAT 324"
+    },
+    {
+      "id": "ME/STAT 424"
+    },
+    {
+      "id": "MATH 531"
+    },
+    {
+      "id": "BMI/COMPSCI 567"
+    },
+    {
+      "id": "STAT 511"
+    },
+    {
+      "id": "STAT 541"
+    },
+    {
+      "id": "BMI/POPHLTH 551"
+    },
+    {
+      "id": "STAT 371"
+    },
+    {
+      "id": "F&WECOL/HORT/STAT 571"
+    },
+    {
+      "id": "COMPSCI 571"
+    },
+    {
+      "id": "BMI/COMPSCI 576"
+    },
+    {
+      "id": "COMPSCI 577"
+    },
+    {
+      "id": "COMPSCI 578"
+    },
+    {
+      "id": "COMPSCI/DS 579"
+    },
+    {
+      "id": "COMPSCI/LIS 611"
+    },
+    {
+      "id": "COMPSCI/LIS 612"
+    },
+    {
+      "id": "COMPSCI/LIS 613"
+    },
+    {
+      "id": "COMPSCI/LIS 614"
+    },
+    {
+      "id": "COMPSCI/ISYE 635"
+    },
+    {
+      "id": "COMPSCI 638"
+    },
+    {
+      "id": "COMPSCI 639"
+    },
+    {
+      "id": "COMPSCI 640"
+    },
+    {
+      "id": "COMPSCI 642"
+    },
+    {
+      "id": "COMPSCI 681"
+    },
+    {
+      "id": "COMPSCI 682"
+    },
+    {
+      "id": "COMPSCI 691"
+    },
+    {
+      "id": "COMPSCI 692"
+    },
+    {
+      "id": "COMPSCI 698"
+    },
+    {
+      "id": "COMPSCI 699"
+    },
+    {
+      "id": "COMPSCI 701"
+    },
+    {
+      "id": "COMPSCI 702"
+    },
+    {
+      "id": "COMPSCI 703"
+    },
+    {
+      "id": "COMPSCI 704"
+    },
+    {
+      "id": "COMPSCI 706"
+    },
+    {
+      "id": "COMPSCI/ECE 707"
+    },
+    {
+      "id": "COMPSCI 710"
+    },
+    {
+      "id": "COMPSCI/MATH 714"
+    },
+    {
+      "id": "COMPSCI/MATH 715"
+    },
+    {
+      "id": "COMPSCI/ISYE 719"
+    },
+    {
+      "id": "COMPSCI/ISYE 723"
+    },
+    {
+      "id": "COMPSCI/ISYE/MATH/STAT 726"
+    },
+    {
+      "id": "COMPSCI/ISYE 727"
+    },
+    {
+      "id": "COMPSCI/ISYE/MATH 728"
+    },
+    {
+      "id": "COMPSCI/ISYE/MATH 730"
+    },
+    {
+      "id": "COMPSCI 733"
+    },
+    {
+      "id": "COMPSCI 736"
+    },
+    {
+      "id": "COMPSCI 739"
+    },
+    {
+      "id": "COMPSCI 740"
+    },
+    {
+      "id": "COMPSCI 744"
+    },
+    {
+      "id": "COMPSCI/ECE 750"
+    },
+    {
+      "id": "COMPSCI/ECE 752"
+    },
+    {
+      "id": "COMPSCI/ECE 755"
+    },
+    {
+      "id": "COMPSCI/ECE 756"
+    },
+    {
+      "id": "COMPSCI/ECE 757"
+    },
+    {
+      "id": "COMPSCI 758"
+    },
+    {
+      "id": "COMPSCI/ECE/EMA/EP/ME 759"
+    },
+    {
+      "id": "COMPSCI 760"
+    },
+    {
+      "id": "COMPSCI/ECE 761"
+    },
+    {
+      "id": "COMPSCI 762"
+    },
+    {
+      "id": "COMPSCI 763"
+    },
+    {
+      "id": "COMPSCI 764"
+    },
+    {
+      "id": "COMPSCI 765"
+    },
+    {
+      "id": "COMPSCI 766"
+    },
+    {
+      "id": "BMI/COMPSCI 767"
+    },
+    {
+      "id": "COMPSCI 769"
+    },
+    {
+      "id": "COMPSCI/EDPSYCH/PSYCH 770"
+    },
+    {
+      "id": "BMI/COMPSCI 776"
+    },
+    {
+      "id": "COMPSCI 777"
+    },
+    {
+      "id": "COMPSCI/ECE 782"
+    },
+    {
+      "id": "COMPSCI 784"
+    },
+    {
+      "id": "COMPSCI 787"
+    },
+    {
+      "id": "COMPSCI 790"
+    },
+    {
+      "id": "COMPSCI 799"
+    },
+    {
+      "id": "COMPSCI 809"
+    },
+    {
+      "id": "COMPSCI 812"
+    },
+    {
+      "id": "COMPSCI 838"
+    },
+    {
+      "id": "COMPSCI 839"
+    },
+    {
+      "id": "BMI/COMPSCI/PSYCH 841"
+    },
+    {
+      "id": "COMPSCI/ECE/STAT 861"
+    },
+    {
+      "id": "ECE 830"
+    },
+    {
+      "id": "COMPSCI 880"
+    },
+    {
+      "id": "COMPSCI 899"
+    },
+    {
+      "id": "COMPSCI 900"
+    },
+    {
+      "id": "BIOCHEM/BME/BMI/CBE/COMPSCI/GENETICS 915"
+    },
+    {
+      "id": "COMPSCI 990"
+    },
+    {
+      "id": "COMPSCI 999"
+    }
+  ],
+  "links": [
+    {
+      "source": "MATH 096",
+      "target": "COMPSCI 202"
+    },
+    {
+      "source": "MATH 141",
+      "target": "COMPSCI 202"
+    },
+    {
+      "source": "MATH 217",
+      "target": "COMPSCI/MATH 240"
+    },
+    {
+      "source": "MATH 221",
+      "target": "COMPSCI/MATH 240"
+    },
+    {
+      "source": "MATH 275",
+      "target": "COMPSCI/MATH 240"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "COMPSCI/ECE 252",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "ECE 203",
+      "target": "COMPSCI 300"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI 304"
+    },
+    {
+      "source": "MATH 222",
+      "target": "COMPSCI 310"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI 320"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI 320"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 320"
+    },
+    {
+      "source": "COMPSCI 319",
+      "target": "COMPSCI 320"
+    },
+    {
+      "source": "COMPSCI/ECE 252",
+      "target": "COMPSCI/ECE 352"
+    },
+    {
+      "source": "COMPSCI/ECE 252",
+      "target": "COMPSCI/ECE 354"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/ECE 354"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/ECE 354"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 369"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 369"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 400"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 202",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 402"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 407"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 407"
+    },
+    {
+      "source": "MATH 222",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "COMPSCI/MATH 240",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "MATH 234",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI 412"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ISYE/MATH 425"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ISYE/MATH 425"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ISYE/MATH 425"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/ISYE/MATH 425"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ECE/MATH 435"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ECE/MATH 435"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ECE/MATH 435"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/ECE/MATH 435"
+    },
+    {
+      "source": "MATH/STAT 310",
+      "target": "COMPSCI/STAT 471"
+    },
+    {
+      "source": "STAT 333",
+      "target": "COMPSCI/STAT 471"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/MATH/STAT 475"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/MATH/STAT 475"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/MATH/STAT 475"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/MATH/STAT 475"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/CURRIC 502"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/CURRIC 502"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 407",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 536",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 537",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 545",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 559",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 564",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 570",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI 679",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "COMPSCI/ECE 552",
+      "target": "COMPSCI/ECE 506"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI/MATH 513"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 322",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 376",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 421",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "MATH 521",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/MATH 514"
+    },
+    {
+      "source": "COMPSCI/MATH 240",
+      "target": "COMPSCI 520"
+    },
+    {
+      "source": "COMPSCI/MATH/STAT 475",
+      "target": "COMPSCI 520"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 520"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 520"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/ECE/ISYE 524"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ISYE/MATH/STAT 525"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ISYE/MATH/STAT 525"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ISYE/MATH/STAT 525"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/ISYE/MATH/STAT 525"
+    },
+    {
+      "source": "MATH 443",
+      "target": "COMPSCI/ISYE/MATH/STAT 525"
+    },
+    {
+      "source": "COMPSCI/ISYE/MATH/STAT 525",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI/ISYE 526"
+    },
+    {
+      "source": "MATH 222",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "MATH 276",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "ECE 203",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "COMPSCI 320",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "ECE 330",
+      "target": "COMPSCI/ECE 533"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ECE 533"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ECE 533"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 534"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 534"
+    },
+    {
+      "source": "MATH 217",
+      "target": "COMPSCI 534"
+    },
+    {
+      "source": "MATH 221",
+      "target": "COMPSCI 534"
+    },
+    {
+      "source": "MATH 275",
+      "target": "COMPSCI 534"
+    },
+    {
+      "source": "COMPSCI/ECE 354",
+      "target": "COMPSCI 536"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 536"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 536"
+    },
+    {
+      "source": "COMPSCI/ECE 354",
+      "target": "COMPSCI 537"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 537"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 537"
+    },
+    {
+      "source": "COMPSCI/ECE 354",
+      "target": "COMPSCI 538"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 538"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 538"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "source": "COMPSCI 220",
+      "target": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI/ECE/ME 539"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "COMPSCI 320",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "MATH 211",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "MATH 217",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "MATH 221",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "MATH 275",
+      "target": "COMPSCI 540"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 542"
+    },
+    {
+      "source": "COMPSCI 320",
+      "target": "COMPSCI 542"
+    },
+    {
+      "source": "COMPSCI 536",
+      "target": "COMPSCI 545"
+    },
+    {
+      "source": "COMPSCI 537",
+      "target": "COMPSCI 545"
+    },
+    {
+      "source": "COMPSCI 564",
+      "target": "COMPSCI 545"
+    },
+    {
+      "source": "COMPSCI/ECE 352",
+      "target": "COMPSCI/ECE 552"
+    },
+    {
+      "source": "COMPSCI/ECE 354",
+      "target": "COMPSCI/ECE 552"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI/ISYE/ME 558"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI/ISYE/ME 558"
+    },
+    {
+      "source": "MATH 234",
+      "target": "COMPSCI/ISYE/ME 558"
+    },
+    {
+      "source": "MATH 222",
+      "target": "COMPSCI 559"
+    },
+    {
+      "source": "MATH 276",
+      "target": "COMPSCI 559"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 559"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 559"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "COMPSCI/ECE/ME 532",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "ECE 331",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "MATH/STAT 309",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "MATH/STAT 431",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "STAT 311",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "STAT 324",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "ME/STAT 424",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "MATH 531",
+      "target": "COMPSCI/ECE 561"
+    },
+    {
+      "source": "COMPSCI/ECE 354",
+      "target": "COMPSCI 564"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 564"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 564"
+    },
+    {
+      "source": "MATH 320",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "MATH 340",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "STAT 511",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "STAT 541",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "BMI/POPHLTH 551",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "STAT 324",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "STAT 371",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "F&WECOL/HORT/STAT 571",
+      "target": "BMI/COMPSCI 567"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI 570"
+    },
+    {
+      "source": "COMPSCI 202",
+      "target": "COMPSCI 570"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 570"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI 570"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI 570"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 571"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "BMI/COMPSCI 576"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "BMI/COMPSCI 576"
+    },
+    {
+      "source": "MATH 222",
+      "target": "BMI/COMPSCI 576"
+    },
+    {
+      "source": "COMPSCI/MATH 240",
+      "target": "COMPSCI 577"
+    },
+    {
+      "source": "COMPSCI/MATH/STAT 475",
+      "target": "COMPSCI 577"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 577"
+    },
+    {
+      "source": "COMPSCI 400",
+      "target": "COMPSCI 577"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 578"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 578"
+    },
+    {
+      "source": "COMPSCI/LIS 611",
+      "target": "COMPSCI/LIS 612"
+    },
+    {
+      "source": "COMPSCI/LIS 612",
+      "target": "COMPSCI/LIS 613"
+    },
+    {
+      "source": "COMPSCI/LIS 613",
+      "target": "COMPSCI/LIS 614"
+    },
+    {
+      "source": "MATH 320",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "MATH 375",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "COMPSCI 202",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI/ISYE 635"
+    },
+    {
+      "source": "COMPSCI 200",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 202",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 300",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 301",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 302",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 310",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 367",
+      "target": "COMPSCI 638"
+    },
+    {
+      "source": "COMPSCI 537",
+      "target": "COMPSCI 640"
+    },
+    {
+      "source": "COMPSCI 537",
+      "target": "COMPSCI 642"
+    },
+    {
+      "source": "COMPSCI 559",
+      "target": "COMPSCI 679"
+    },
+    {
+      "source": "COMPSCI/ISYE/MATH/STAT 726",
+      "target": "COMPSCI/ISYE/MATH 730"
+    },
+    {
+      "source": "COMPSCI 736",
+      "target": "COMPSCI 739"
+    },
+    {
+      "source": "COMPSCI 760",
+      "target": "COMPSCI 762"
+    },
+    {
+      "source": "COMPSCI/ECE 761",
+      "target": "COMPSCI/ECE/STAT 861"
+    },
+    {
+      "source": "ECE 830",
+      "target": "COMPSCI/ECE/STAT 861"
+    }
+  ]
+}
