@@ -3,6 +3,7 @@ function normalizeSelector(selector) {
     return selector.replace(/[\s\/&]/g, '');
 }
 
+// add labels on hover
 function addLabels(className) {
     const svg = d3.select('svg');
     let node = svg.select('#' + className)
@@ -12,10 +13,13 @@ function addLabels(className) {
         .attr('x', parseFloat(node.attr('cx')) + 8)
         .attr('y', parseFloat(node.attr('cy')) - 8)
         .attr('transform', node.attr('transform'))
-        .attr('fill', 'blue')
+        .attr('fill', '#211103')
         .style('pointer-events', 'none')
+        .style('text-shadow', '0px 0px 2px white')
+        .style('font-family', 'Helvetica')
         .text(node.data()[0].id);
 }
+
 // route in server to retrieve data from python
 fetch('/data')
     .then(function (response) {
@@ -24,8 +28,8 @@ fetch('/data')
             const nodes = courseMap.nodes.map(node => Object.create(node));
             const links = courseMap.links.map(link => Object.create(link));
             // svg dimensions
-            const width = d3.select('svg').attr('width');
-            const height = d3.select('svg').attr('height');
+            const width = document.documentElement.clientWidth;
+            const height = document.documentElement.clientHeight;
             const simulation = d3.forceSimulation(nodes)
                 .force('charge', d3.forceManyBody().strength(-250))
                 .force('link', d3.forceLink(links).id(d => d.id).distance(100))
@@ -63,7 +67,33 @@ fetch('/data')
                 .attr('orient', 'auto')
                 .append('path')
                 .attr('d', 'M0,-1.5L5,0L0,1.5')
-                .attr('fill', '#A9A9A9');
+                .attr('fill', '#C3BABA');
+
+            svg.select('defs')
+                .append('marker')
+                .attr('id', 'blue-arrow')
+                .attr('viewBox', '0 -2.5 5 5')
+                .attr('refX', 7)
+                .attr('refY', 0)
+                .attr('markerWidth', 15)
+                .attr('markerHeight', 15)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M0,-1.5L5,0L0,1.5')
+                .attr('fill', '#06BEE1');
+
+            svg.select('defs')
+                .append('marker')
+                .attr('id', 'red-arrow')
+                .attr('viewBox', '0 -2.5 5 5')
+                .attr('refX', 7)
+                .attr('refY', 0)
+                .attr('markerWidth', 15)
+                .attr('markerHeight', 15)
+                .attr('orient', 'auto')
+                .append('path')
+                .attr('d', 'M0,-1.5L5,0L0,1.5')
+                .attr('fill', '#D62246');
 
             // lines definition
             const lines = svg
@@ -74,11 +104,10 @@ fetch('/data')
                 .enter()
                 .append('line')
                 .attr('class', (d) => `link-source-${normalizeSelector(d.source.id)} link-target-${normalizeSelector(d.target.id)}`)
-                .attr('stroke', '#A9A9A9')
+                .attr('stroke', '#C3BABA')
                 .attr('marker-end', 'url(#arrow)');
 
             // TODO style circles
-            // TODO remove overlap of labels
             // circles definition
             const circles = svg
                 .append('g')
@@ -89,6 +118,7 @@ fetch('/data')
                 .append('circle')
                 .attr('id', (d) => normalizeSelector(d.id))
                 .attr('r', 8)
+                .attr('fill', 'gray')
                 .on('mouseover', function (event, d) {
                     const node = d3.select(this);
                     // append text to node being hovered
@@ -100,10 +130,13 @@ fetch('/data')
                         .attr('transform', node.attr('transform'))
                         .attr('fill', 'blue')
                         .style('pointer-events', 'none')
+                        .style('font-family', 'Helvetica')
                         .text(d.id);
                     // append text to source nodes
                     let sourceLinks = svg.selectAll('.link-target-' + normalizeSelector(d.id));
-                    sourceLinks.attr('stroke', 'red')
+                    sourceLinks
+                        .attr('stroke', '#D62246')
+                        .attr('marker-end', 'url(#red-arrow)');
                     sourceLinks.each(function () {
                         let sourceLink = d3.select(this);
                         const sourceClass = sourceLink.attr('class').split(' ').map((className) => className.replace(/.+-/, ''))[0];
@@ -111,7 +144,9 @@ fetch('/data')
                     });
                     // append text to target nodes
                     let targetLinks = svg.selectAll('.link-source-' + normalizeSelector(d.id));
-                    targetLinks.attr('stroke', 'green')
+                    targetLinks
+                        .attr('stroke', '#06BEE1')
+                        .attr('marker-end', 'url(#blue-arrow)');
                     targetLinks.each(function () {
                         let targetLink = d3.select(this);
                         const targetClass = targetLink.attr('class').split(' ').map((className) => className.replace(/.+-/, ''))[1];
@@ -121,10 +156,12 @@ fetch('/data')
                 .on('mouseout', function (event, d) {
                     d3.select('#' + 'label-' + normalizeSelector(d.id)).remove();
                     svg.selectAll('.link-target-' + normalizeSelector(d.id))
-                        .attr('stroke', '#A9A9A9');
+                        .attr('stroke', '#C3BABA')
+                        .attr('marker-end', 'url(#arrow)');
                     svg.selectAll('.secondary-label').remove();
                     svg.selectAll('.link-source-' + normalizeSelector(d.id))
-                        .attr('stroke', '#A9A9A9');
+                        .attr('stroke', '#C3BABA')
+                        .attr('marker-end', 'url(#arrow)');
                 });
 
             // run force simulation on nodes and links
