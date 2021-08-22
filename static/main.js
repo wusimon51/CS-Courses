@@ -128,7 +128,7 @@ fetch('/data')
                         .attr('x', parseFloat(node.attr('cx')) + 8)
                         .attr('y', parseFloat(node.attr('cy')) - 8)
                         .attr('transform', node.attr('transform'))
-                        .attr('fill', 'blue')
+                        .attr('fill', '#211103')
                         .style('pointer-events', 'none')
                         .style('font-family', 'Helvetica')
                         .text(d.id);
