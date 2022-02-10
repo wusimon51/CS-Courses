@@ -196,9 +196,6 @@
       "id": "COMPSCI/ECE/ME 532"
     },
     {
-      "id": "MATH 276"
-    },
-    {
       "id": "COMPSCI/ECE 533"
     },
     {
@@ -224,6 +221,9 @@
     },
     {
       "id": "COMPSCI/ISYE/ME 558"
+    },
+    {
+      "id": "MATH 276"
     },
     {
       "id": "COMPSCI/ECE 561"
@@ -373,9 +373,6 @@
       "id": "COMPSCI/ISYE/MATH 730"
     },
     {
-      "id": "COMPSCI 733"
-    },
-    {
       "id": "COMPSCI 736"
     },
     {
@@ -437,6 +434,9 @@
     },
     {
       "id": "COMPSCI/EDPSYCH/PSYCH 770"
+    },
+    {
+      "id": "BMI/COMPSCI 775"
     },
     {
       "id": "BMI/COMPSCI 776"
@@ -969,11 +969,23 @@
       "target": "COMPSCI/ISYE 526"
     },
     {
-      "source": "MATH 222",
+      "source": "MATH 234",
       "target": "COMPSCI/ECE/ME 532"
     },
     {
-      "source": "MATH 276",
+      "source": "MATH 320",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "MATH 340",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "MATH 341",
+      "target": "COMPSCI/ECE/ME 532"
+    },
+    {
+      "source": "MATH 375",
       "target": "COMPSCI/ECE/ME 532"
     },
     {
